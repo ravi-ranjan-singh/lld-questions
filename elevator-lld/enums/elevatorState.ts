@@ -1,4 +1,4 @@
-export enum LiftState {
+export enum ElevatorState {
   "IDLE" = "IDLE",
   "OPENING" = "OPENING",
   "READING_FLOOR" = "READING_FLOOR",

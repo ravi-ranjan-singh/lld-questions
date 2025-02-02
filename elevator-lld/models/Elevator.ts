@@ -1,11 +1,11 @@
-import { LiftState } from "../enums/liftStates";
+import { ElevatorState } from "../enums/elevatorState";
 import { Floor } from "./Floor";
 
-export class Lift {
+export class Elevator {
   private floors: Floor[] = [];
   private currentFloor: Floor;
   private destinationFloor: Floor;
-  private state: LiftState = LiftState.IDLE;
+  private state: ElevatorState = ElevatorState.IDLE;
 
   constructor(maximumFloors: number) {
     this.floors = Array.from({ length: maximumFloors }, (_, i) => new Floor(i));
@@ -29,11 +29,11 @@ export class Lift {
     return this.destinationFloor;
   }
 
-  changeState(state: LiftState): void {
+  changeState(state: ElevatorState): void {
     this.state = state;
   }
 
-  getState(): LiftState {
+  getState(): ElevatorState {
     return this.state;
   }
 }
